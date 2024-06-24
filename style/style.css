@@ -1,0 +1,249 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  padding: 10px 40px;
+
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  background: #eff0f1;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 2000px;
+  margin: 130px 0px;
+  gap: 40px;
+}
+
+.descricao-visao-celular {
+  display: none;
+}
+
+.secao-carro {
+  height: 510px;
+  width: 50%;
+}
+
+.imagem-carro {
+  height: 100%;
+  max-height: 35vw;
+
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 3.5rem 0 rgb(0, 0, 0.3);
+
+  border-radius: 8px;
+}
+
+.imagem-carro img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  object-fit: cover;
+  transition: all 0.24s;
+}
+
+.imagem-carro img:hover {
+  transform: scale(1.1);
+}
+
+.definicoes-carro {
+  width: 40%;
+}
+
+.descricao-visao-web {
+  display: block;
+}
+
+.titulo {
+  color: #cc0033;
+}
+
+.subtitulo {
+  color: #313639;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.descricao {
+  color: #383c3e;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 4.4rem;
+}
+
+.cores {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.cores h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.paletas-de-cores {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.paletas-de-cores li {
+  list-style: none;
+}
+
+.paletas-de-cores li span {
+  display: flex;
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  box-shadow: 0 0 1.1rem 0 rgba(0, 0);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.paletas-de-cores li span:hover {
+  transform: scale(1.15);
+}
+
+.rodas {
+  display: flex;
+  flex-direction: column;
+}
+
+.rodas h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.colecao-de-rodas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.colecao-de-rodas li {
+  max-width: 9.5rem;
+  list-style: none;
+}
+
+.colecao-de-rodas li span {
+  background-image: url("./assets/rodas.jpeg");
+
+  width: 96px;
+  height: 95px;
+  display: block;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.colecao-de-rodas li span:hover {
+  transform: scale(1.15);
+}
+
+.fale-conosco {
+  position: fixed;
+  bottom: 4.8rem;
+  right: 3.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fale-conosco img {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.fale-conosco:hover {
+  transform: scale(1.1);
+}
+
+.selecionado {
+  transform: scale(1.15);
+  box-shadow: 0 0 1.1rem 0 rgba(0, 0);
+}
+
+@media (max-width: 900px) {
+  .conteudo {
+    flex-direction: column;
+  }
+
+  .descricao-visao-celular {
+    margin: 10px;
+    display: block;
+  }
+
+  .descricao-visao-web {
+    display: none;
+  }
+
+  .secao-carro {
+    width: 100%;
+    height: 70vw;
+  }
+
+  .imagem-carro {
+    max-height: 70vw;
+  }
+
+  .definicoes-carro {
+    width: 100%;
+    padding: 1.6rem;
+  }
+  .descricao {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteudo {
+    margin: 110px 0px;
+  }
+
+  .paletas-de-cores li span {
+    width: 55px;
+    height: 55px;
+  }
+
+  .colecao-de-roda li span {
+    width: 65px;
+    height: 65px;
+    background-size: 100%;
+  }
+
+  .fale-conosco {
+    bottom: 1rem;
+    right: 1.5rem;
+  }
+
+  .fale-conosco img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
